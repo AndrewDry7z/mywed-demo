@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyWed Demo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="inputs">
+            <div class="inputs__name">
+                <input class="js-name-input" type="text" name="name" placeholder="Имя фотографа...">
+            </div>
+
+            <div class="header__logo">
+                <img src="https://cdn2.mywed.com/images/to-sprite-in-future/logo.svg" alt="">
+            </div>
+
+            <div class="inputs__city">
+                <select name="city" class="js-cities-select">
+                    <option value="Выбрать город" disabled selected>Выбрать город</option>
+                    <option value="">Все города</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <h1 class="dynamic-heading">Все фотографии:</h1>
+        <div class="gallery">
+            <!-- gallery rendered in main.script.js -->
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__logo">
+            <img src="//mywed.com/images/mywed-logo/logo_mywed_gorizontal_black.svg" alt="MyWed">
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.script.js"></script>
+</body>
+</html>

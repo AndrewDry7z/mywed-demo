@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic');
+@import "variables";
+@import "animations";
+@import "normalize";
+@import "header";
+@import "gallery";
+@import "footer";
+@import "lightbox";
+
+body {
+  font-family: "PT Sans", Verdana, Geneva, sans-serif;
+}
+
+main {
+  @media screen and (min-width: 680px) {
+    margin-top: 100px;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.dynamic-heading {
+  text-align: center;
+  margin-top: 40px;
+}

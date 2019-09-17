@@ -1,0 +1,13 @@
+.footer {
+  background: #f7f7f7;
+  padding: 30px;
+
+  &__logo {
+    width: 150px;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}

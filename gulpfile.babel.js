@@ -21,13 +21,13 @@ let paths = {
     mainScript: 'src/js/main.script.js',
     watchScripts: 'src/js/**/*',
     images: 'src/images/**/*'
-}
+};
 
 gulp.task('js', () => {
     browserify(paths.mainScript)
         .transform('babelify', {
             global: true,
-            only: /^(?:.*\/node_modules\/(?:a|b|c|d)\/|(?!.*\/node_modules\/)).*$/,
+            only: /^(?:.*\/node_modules\/[abcd]\/|(?!.*\/node_modules\/)).*$/,
             presets: ["es2015"]
         })
         .bundle()
@@ -40,7 +40,7 @@ gulp.task('js', () => {
 
 gulp.task('scss', function() {
     let plugins = [
-        autoprefixer({browsers: ['last 5 year']})
+        autoprefixer({browsers: ['last 2 versions']})
     ];
     return gulp.src(paths.mainSCSS)
         .pipe(sass())

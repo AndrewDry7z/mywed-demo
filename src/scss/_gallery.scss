@@ -33,6 +33,7 @@
       transition: opacity 0.3s;
       margin: auto;
       cursor: zoom-in;
+      animation: fade-in .5s ease-in;
     }
 
     &__info {

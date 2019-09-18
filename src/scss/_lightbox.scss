@@ -11,6 +11,12 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.58);
     animation: fade-in .5s ease-in;
+
+    &--hidden {
+      animation: fade-out .5s ease-in;
+      opacity: 0;
+    }
+
   }
 
   &-body {
@@ -21,6 +27,7 @@
 
   &-image {
     width: 100%;
+    cursor: zoom-out;
   }
 
   &-close {

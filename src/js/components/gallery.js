@@ -46,9 +46,19 @@ class Gallery {
         `;
 
         let closeLightbox = document.querySelector('.js-lightbox-close');
-        closeLightbox.addEventListener('click', () => {
-            lightboxOverlay.remove();
-        });
+        let lightboxImage = document.querySelector('.lightbox-image');
+
+        function destroyLightboxOnClick(element) {
+            element.addEventListener('click', () => {
+                lightboxOverlay.classList.add('lightbox-overlay--hidden');
+                setTimeout(function () {
+                    lightboxOverlay.remove();
+                }, 350);
+            });
+        }
+
+        destroyLightboxOnClick(closeLightbox);
+        destroyLightboxOnClick(lightboxImage);
 
     }
 
@@ -93,9 +103,6 @@ class Gallery {
             }
 
         }
-
-        // images lazy load
-        let bLazy = new Blazy({});
 
         // dynamic h1
         let dynamicHeading = document.querySelector('.dynamic-heading');

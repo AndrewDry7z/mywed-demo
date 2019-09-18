@@ -3,8 +3,12 @@
 import filterUnique from "./components/unique";
 import photos_db from "./components/photos_db";
 import Gallery from "./components/gallery";
+import Blazy from "./utils/blazy";
 
 window.onload = function () {
+
+    // images lazy load
+    new Blazy({});
 
     // cities list generating
     let citiesList = [];
@@ -76,7 +80,10 @@ window.onload = function () {
                 gallery.createItem();
             }
 
+            // images lazy load
+            new Blazy({});
             initLightboxes();
+
 
         });
     }
